@@ -7,7 +7,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState('about')
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 flex flex-col">
       {/* Navigation */}
       <nav className="fixed top-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-md z-50 border-b border-slate-200 dark:border-slate-700">
         <div className="max-w-6xl mx-auto px-6 py-4">
@@ -47,55 +47,66 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="pt-24 pb-12 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-8">
-            <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-                你好，我是
-                <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-                  林风声
-                </span>
-              </h1>
-              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-                00后大厂项目经理，专注于智能体与AI编程的落地应用与提效。
-                <br />
-                热爱AI落地应用的文科生，两小时打工制的践行者。
-              </p>
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <a
-                  href="https://github.com/LareinaLiuin/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors text-sm"
-                >
-                  GitHub Profile
-                </a>
-                <button
-                  onClick={() => setActiveSection('contact')}
-                  className="px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm"
-                >
-                  联系我
-                </button>
-              </div>
+        <div className="max-w-5xl mx-auto relative">
+          <div className="text-center lg:text-left pr-64">
+            <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
+              你好，我是
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
+                林风声
+              </span>
+            </h1>
+            <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
+              00后大厂项目经理，专注于智能体与AI编程的落地应用与提效。
+              <br />
+              热爱AI落地应用的文科生，两小时打工制的践行者。
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+              <a
+                href="https://github.com/LareinaLiuin/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors text-sm"
+              >
+                GitHub Profile
+              </a>
+              <button
+                onClick={() => setActiveSection('contact')}
+                className="px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm"
+              >
+                联系我
+              </button>
             </div>
-            <div className="relative">
-              <div className="w-48 h-48 lg:w-56 lg:h-56 relative">
-                <Image
-                  src="/avatar.jpg"
-                  alt="林风声"
-                  fill
-                  className="object-cover rounded-2xl shadow-2xl"
-                  priority
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent rounded-2xl"></div>
-              </div>
+          </div>
+          <div className="absolute top-0 right-0 lg:block hidden">
+            <div className="w-56 h-56 relative">
+              <Image
+                src="/avatar.jpg"
+                alt="林风声"
+                fill
+                className="object-cover rounded-2xl shadow-2xl"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent rounded-2xl"></div>
+            </div>
+          </div>
+          {/* Mobile avatar */}
+          <div className="flex justify-center lg:hidden mt-8">
+            <div className="w-48 h-48 relative">
+              <Image
+                src="/avatar.jpg"
+                alt="林风声"
+                fill
+                className="object-cover rounded-2xl shadow-2xl"
+                priority
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="pb-16 px-6">
+      <section className="pb-16 px-6 flex-grow mt-2">
         <div className="max-w-5xl mx-auto">
           {activeSection === 'about' && (
             <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
@@ -251,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-8 px-6">
+      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-8 px-6 mt-auto">
         <div className="max-w-6xl mx-auto text-center">
           <p className="text-slate-400 mb-3 text-sm">
             © 2024 林风声. 专注于AI落地应用与智能体开发
