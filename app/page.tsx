@@ -48,7 +48,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-24 pb-12 px-6">
         <div className="max-w-5xl mx-auto relative">
-          <div className="text-center lg:text-left pr-64">
+          <div className="text-center pr-16 lg:text-left">
             <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
               你好，我是
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
@@ -60,7 +60,7 @@ export default function Home() {
               <br />
               热爱AI落地应用的文科生，两小时打工制的践行者。
             </p>
-            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+            <div className="flex flex-wrap gap-3 justify-center">
               <a
                 href="https://github.com/LareinaLiuin/"
                 target="_blank"
@@ -77,7 +77,7 @@ export default function Home() {
               </button>
             </div>
           </div>
-          <div className="absolute top-0 right-0 lg:block hidden">
+          <div className="absolute top-0 right-6 lg:block hidden">
             <div className="w-56 h-56 relative">
               <Image
                 src="/avatar.jpg"
