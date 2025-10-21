@@ -46,40 +46,40 @@ export default function Home() {
       </nav>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 px-6">
+      <section className="pt-24 pb-12 px-6">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
             <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+              <h1 className="text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white mb-4">
                 你好，我是
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
                   林风声
                 </span>
               </h1>
-              <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+              <p className="text-lg text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
                 00后大厂项目经理，专注于智能体与AI编程的落地应用与提效。
                 <br />
                 热爱AI落地应用的文科生，两小时打工制的践行者。
               </p>
-              <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <a
                   href="https://github.com/LareinaLiuin/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-6 py-3 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors"
+                  className="px-5 py-2.5 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-lg font-medium hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors text-sm"
                 >
                   GitHub Profile
                 </a>
                 <button
                   onClick={() => setActiveSection('contact')}
-                  className="px-6 py-3 border border-slate-300 dark:border-slate-600 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors"
+                  className="px-5 py-2.5 border border-slate-300 dark:border-slate-600 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors text-sm"
                 >
                   联系我
                 </button>
               </div>
             </div>
             <div className="relative">
-              <div className="w-64 h-64 lg:w-80 lg:h-80 relative">
+              <div className="w-48 h-48 lg:w-56 lg:h-56 relative">
                 <Image
                   src="/avatar.jpg"
                   alt="林风声"
@@ -95,13 +95,13 @@ export default function Home() {
       </section>
 
       {/* Main Content */}
-      <section className="py-20 px-6">
-        <div className="max-w-4xl mx-auto">
+      <section className="pb-16 px-6">
+        <div className="max-w-5xl mx-auto">
           {activeSection === 'about' && (
-            <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">关于我</h2>
-                <div className="space-y-4 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-4">关于我</h2>
+                <div className="space-y-3 text-base text-slate-600 dark:text-slate-300 leading-relaxed">
                   <p>
                     作为一名00后的大厂项目经理，我始终站在技术与人文的交叉点上，致力于将AI的无限可能转化为实际的生产力提升。
                   </p>
@@ -117,62 +117,62 @@ export default function Home() {
           )}
 
           {activeSection === 'skills' && (
-            <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">技能专长</h2>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-6 rounded-xl">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">技能专长</h2>
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 p-4 rounded-xl">
+                    <div className="flex items-center mb-3">
+                      <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                         AI
                       </div>
-                      <h3 className="ml-4 text-xl font-semibold text-slate-900 dark:text-white">
+                      <h3 className="ml-3 text-lg font-semibold text-slate-900 dark:text-white">
                         Claude Code 开发
                       </h3>
                     </div>
-                    <p className="text-slate-600 dark:text-slate-300">
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
                       擅长使用Claude Code进行脑洞开发，快速将创意想法转化为实际产品和解决方案。
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-6 rounded-xl">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 p-4 rounded-xl">
+                    <div className="flex items-center mb-3">
+                      <div className="w-10 h-10 bg-purple-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                         ⚡
                       </div>
-                      <h3 className="ml-4 text-xl font-semibold text-slate-900 dark:text-white">
+                      <h3 className="ml-3 text-lg font-semibold text-slate-900 dark:text-white">
                         智能体工作流
                       </h3>
                     </div>
-                    <p className="text-slate-600 dark:text-slate-300">
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
                       使用Coze、N8N等智能体平台搭建工作流，实现日常工作200%提效。
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-6 rounded-xl">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 p-4 rounded-xl">
+                    <div className="flex items-center mb-3">
+                      <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                         🔮
                       </div>
-                      <h3 className="ml-4 text-xl font-semibold text-slate-900 dark:text-white">
+                      <h3 className="ml-3 text-lg font-semibold text-slate-900 dark:text-white">
                         AI落地应用
                       </h3>
                     </div>
-                    <p className="text-slate-600 dark:text-slate-300">
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
                       专注于AI技术在实际业务场景中的应用，特别关注身心灵领域的创新结合。
                     </p>
                   </div>
 
-                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 p-6 rounded-xl">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                  <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 p-4 rounded-xl">
+                    <div className="flex items-center mb-3">
+                      <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
                         📈
                       </div>
-                      <h3 className="ml-4 text-xl font-semibold text-slate-900 dark:text-white">
+                      <h3 className="ml-3 text-lg font-semibold text-slate-900 dark:text-white">
                         效率提升
                       </h3>
                     </div>
-                    <p className="text-slate-600 dark:text-slate-300">
+                    <p className="text-sm text-slate-600 dark:text-slate-300">
                       两小时打工制践行者，通过AI工具和方法论实现工作效率的倍增。
                     </p>
                   </div>
@@ -182,49 +182,49 @@ export default function Home() {
           )}
 
           {activeSection === 'contact' && (
-            <div className="space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-500">
-              <div className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-lg border border-slate-200 dark:border-slate-700">
-                <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">联系方式</h2>
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div className="space-y-6">
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-600 dark:text-blue-400 text-xl">📧</span>
+            <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+              <div className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg border border-slate-200 dark:border-slate-700">
+                <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">联系方式</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
+                        <span className="text-blue-600 dark:text-blue-400 text-lg">📧</span>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-white">微信</h3>
-                        <p className="text-slate-600 dark:text-slate-300">Lareina_Liuin</p>
+                        <h3 className="font-semibold text-slate-900 dark:text-white text-sm">微信</h3>
+                        <p className="text-slate-600 dark:text-slate-300 text-sm">Lareina_Liuin</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
-                        <span className="text-green-600 dark:text-green-400 text-xl">📱</span>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
+                        <span className="text-green-600 dark:text-green-400 text-lg">📱</span>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-white">公众号</h3>
+                        <h3 className="font-semibold text-slate-900 dark:text-white text-sm">公众号</h3>
                         <a
                           href="https://mp.weixin.qq.com/s/ymquEzEettN27OaaJJZ8ZQ"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-600 dark:text-blue-400 hover:underline"
+                          className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
                         >
                           点击关注
                         </a>
                       </div>
                     </div>
 
-                    <div className="flex items-center space-x-4">
-                      <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
-                        <span className="text-purple-600 dark:text-purple-400 text-xl">💻</span>
+                    <div className="flex items-center space-x-3">
+                      <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
+                        <span className="text-purple-600 dark:text-purple-400 text-lg">💻</span>
                       </div>
                       <div>
-                        <h3 className="font-semibold text-slate-900 dark:text-white">GitHub</h3>
+                        <h3 className="font-semibold text-slate-900 dark:text-white text-sm">GitHub</h3>
                         <a
                           href="https://github.com/LareinaLiuin/"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-blue-600 dark:text-blue-400 hover:underline"
+                          className="text-blue-600 dark:text-blue-400 hover:underline text-sm"
                         >
                           @LareinaLiuin
                         </a>
@@ -233,7 +233,7 @@ export default function Home() {
                   </div>
 
                   <div className="flex items-center justify-center">
-                    <div className="relative w-48 h-48">
+                    <div className="relative w-36 h-36">
                       <Image
                         src="/wechat-qrcode.png"
                         alt="微信二维码"
@@ -251,17 +251,17 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-12 px-6">
+      <footer className="bg-slate-900 dark:bg-slate-950 text-white py-8 px-6">
         <div className="max-w-6xl mx-auto text-center">
-          <p className="text-slate-400 mb-4">
+          <p className="text-slate-400 mb-3 text-sm">
             © 2024 林风声. 专注于AI落地应用与智能体开发
           </p>
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-4">
             <a
               href="https://github.com/LareinaLiuin/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 hover:text-white transition-colors text-sm"
             >
               GitHub
             </a>
@@ -269,7 +269,7 @@ export default function Home() {
               href="https://mp.weixin.qq.com/s/ymquEzEettN27OaaJJZ8ZQ"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-slate-400 hover:text-white transition-colors"
+              className="text-slate-400 hover:text-white transition-colors text-sm"
             >
               公众号
             </a>
